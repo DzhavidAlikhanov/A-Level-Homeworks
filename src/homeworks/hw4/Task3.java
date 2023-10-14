@@ -1,17 +1,18 @@
 package homeworks.hw4;
 
 import java.util.Random;
+import java.util.Arrays;
 
 public class Task3 {
     public static void main(String[] args) {
         int[] array = new int[2000];
         fillArray(array);
 
-        replaceEvenWithZeros(array);
+        int[] modifiedArray = replaceEvenWithZeros(array);
 
-        // Выводим первые несколько элементов массива для проверки
+        // Выводим первые несколько элементов измененного массива для проверки
         for (int i = 0; i < 10; i++) {
-            System.out.print(array[i] + " ");
+            System.out.print(modifiedArray[i] + " ");
         }
     }
 
@@ -22,11 +23,14 @@ public class Task3 {
         }
     }
 
-    public static void replaceEvenWithZeros(int[] arr) {
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] % 2 == 0) {
-                arr[i] = 0;
+    public static int[] replaceEvenWithZeros(int[] arr) {
+        int[] modifiedArray = Arrays.copyOf(arr, arr.length);
+
+        for (int i = 0; i < modifiedArray.length; i++) {
+            if (modifiedArray[i] % 2 == 0) {
+                modifiedArray[i] = 0;
             }
         }
+        return modifiedArray;
     }
 }
