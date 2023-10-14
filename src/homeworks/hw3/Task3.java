@@ -10,16 +10,28 @@ public class Task3 {
         System.out.print("Введите строку: ");
         String input = scanner.nextLine();
 
-        // Разделение строки на слова по пробелам
-        String[] words = input.trim().split("\\s+"); // Учитываем возможные пробелы в начале и конце
+        // Подсчёт количества слов
+        int wordCount = countWords(input);
 
-        // Подсчет количества слов
-        int wordCount = words.length;
-
-        // Вывод результата
-        System.out.println("Количество слов в строке: " + wordCount);
+        // Вывод резутьтата
+        printWordCount(wordCount);
 
         scanner.close();
+
+    }
+
+    // Метод для подсчёта количества слов в строке
+    public static int countWords(String input) {
+        // Разделение строки на слова по пробелам с учётом возможных пробелов в начале и вконце строки
+        String[] words = input.trim().split("\\s+");
+        return words.length;
+    }
+
+    // Метод для вывода результата
+    public static void printWordCount(int wordCount) {
+        System.out.println("Количество слов в строке: " + wordCount);
+
+
     }
 }
 
