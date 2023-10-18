@@ -1,4 +1,4 @@
-package homeworks.hw2;
+package ua.alikhanov.homeworks.hw2;
 
 public class Task2 {
     public static void main(String[] args) {

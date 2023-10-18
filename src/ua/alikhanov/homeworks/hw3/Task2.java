@@ -1,4 +1,4 @@
-package homeworks.hw3;
+package ua.alikhanov.homeworks.hw3;
 
 import java.util.Scanner;
 

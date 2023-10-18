@@ -1,4 +1,4 @@
-package homeworks.hw2;
+package ua.alikhanov.homeworks.hw2;
 
 import java.util.Scanner; // Импорт класса Scanner для ввода с клавиатуры.
 
