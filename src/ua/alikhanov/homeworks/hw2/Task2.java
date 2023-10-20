@@ -12,18 +12,26 @@ public class Task2 {
         double yC = 7.0;
 
         // Вычисление длин сторон треугольника
-        double AB = Math.sqrt(Math.pow(xB - xA, 2) + Math.pow(yB - yA, 2));
-        double BC = Math.sqrt(Math.pow(xC - xB, 2) + Math.pow(yC - yB, 2));
-        double CA = Math.sqrt(Math.pow(xA - xC, 2) + Math.pow(yA - yC, 2));
+        double AB = calculateDistance(xA, yA, xB, yB);
+        double BC = calculateDistance(xB, yB, xC, yC);
+        double CA = calculateDistance(xC, yC, xA, yA);
 
-
-        // Вычисление полупериметра
-        double s = (AB + BC + CA) / 2;
-
-        // Вычисление площади треугольника по формуле Герона
-        double S = Math.sqrt(s * (s - AB) * (s - BC) * (s - CA));
+        // Вычисление площади треугольника
+        double S = calculateTriangleArea(AB, BC, CA);
 
         // Вывод на консоль площади треугольника
         System.out.println("Площадь треугольника: " + S);
+    }
+
+    // Метод для вычисления расстояния между двумя точками
+    public static double calculateDistance(double x1, double y1, double x2, double y2) {
+        return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+    }
+
+    // Метод для вычисления площади треугольника по формуле Герона
+    public static double calculateTriangleArea(double AB, double BC, double CA) {
+        double s = (AB + BC + CA) / 2;
+        return Math.sqrt(s * (s - AB) * (s - BC) * (s - CA));
+
     }
 }

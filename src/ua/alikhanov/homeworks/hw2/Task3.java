@@ -1,6 +1,6 @@
 package ua.alikhanov.homeworks.hw2;
 
-import java.util.Scanner; // Импорт класса Scanner для ввода с клавиатуры.
+import java.util.Scanner;
 
 
 public class Task3 {
@@ -15,15 +15,22 @@ public class Task3 {
                 System.out.println("Выход из программы."); // Вывод сообщения "Выход из программы."
                 break; // Выход из цикла при вводе отрицательного числа
             }
+            printEvenOrOdd(number); // Вызов метода для вывода информации о четности/нечетности числа.
+        }
 
-            if (isEven(number)) { // Вызов метода isEven для проверки, является ли число четным.
+        scanner.close();
+    }
+
+    public static void printEvenOrOdd(int number) {
+        if (isEven(number)) {
+
+            if (isEven(number)) {
                 System.out.println(number + " - четное число"); // Вывод сообщения о том, что число четное.
             } else {
                 System.out.println(number + " - нечетное число"); // Вывод сообщения о том, что число нечетное.
             }
         }
 
-        scanner.close(); // Закрытие объекта Scanner.
     }
 
     public static boolean isEven(int number) {
@@ -31,10 +38,4 @@ public class Task3 {
         return number % 2 == 0; //Проверка, является ли число четным, и возвращение результата.
     }
 }
-
-
-
-
-
-
 

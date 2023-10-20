@@ -1,51 +1,38 @@
 package ua.alikhanov.homeworks.hw2;
 
-import java.util.Scanner; // Импорт класса Scanner(сканер) для ввода с клавиатуры.
+import java.util.Scanner;
 
 public class Task4 {
     public static void main(String[] args) {
-        // Создание объекта Scanner для считывания данных с консоли.
         Scanner scanner = new Scanner(System.in);
-        // Вывод предложения для ввода первого числа.
-        System.out.print("Введите первое число: ");
-        // Считывание первого числа с клавиатуры и сохранение его в переменной.
-        int numberA = scanner.nextInt();
-        // Вывод предложения для ввода первого числа.
-        System.out.print("Введите второе число: ");
-        // Считывание второго числа с клавиатуры и сохранение его в переменной.
-        int numberB = scanner.nextInt();
-        // Вывод предложения для ввода первого числа.
-        System.out.print("Введите третье число: ");
-        // Считывание третьего числа с клавиатуры и сохранение его в переменной.
-        int numberC = scanner.nextInt();
+
+        int numberA = getUserInput(scanner, "Введите первое число: ");
+        int numberB = getUserInput(scanner, "Введите второе число: ");
+        int numberC = getUserInput(scanner, "Введите третье число: ");
 
 
-        // Вывод предложения для ввода первого числа.
         int minAbsoluteValue = getMinAbsoluteValue(numberA, numberB, numberC);
 
-        // Вывод результата (наименьшего по модулю числа) на экран.
-        System.out.println("Наименьшее по модулю число: " + minAbsoluteValue);
+        printResult(minAbsoluteValue);
 
+        scanner.close();
 
-        scanner.close(); // Закрытие объекта Scanner.
+    }
+
+    public static int getUserInput(Scanner scanner, String promt) {
+        System.out.println(promt);
+        return scanner.nextInt();
     }
 
     public static int getMinAbsoluteValue(int a, int b, int c) {
-        //Вычисление модуля числа с помощью тернарной операции и сохранение результата в absolute.
-        int absoluteA = (a < 0) ? -a : a;
-        int absoluteB = (b < 0) ? -b : b;
-        int absoluteC = (c < 0) ? -c : c;
+        int absoluteA = Math.abs(a);
+        int absoluteB = Math.abs(b);
+        int absoluteC = Math.abs(c);
 
-        // Выбор минимального модуля из трех чисел с помощью вложенной тернарной операции и возвращение его в качестве результата.
+        return Math.min(Math.min(absoluteA, absoluteB), absoluteC);
+    }
 
-        if (absoluteA < absoluteB && absoluteA < absoluteC) {
-            return absoluteA;
-        } else if (absoluteB < absoluteA && absoluteB < absoluteC) {
-            return absoluteB;
-        } else {
-            return absoluteC;
-
-        }
-
+    public static void printResult(int minAbsoluteValue) {
+        System.out.println("Наименьшее по модулю исло: " + minAbsoluteValue);
     }
 }
