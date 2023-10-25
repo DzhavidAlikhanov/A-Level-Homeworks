@@ -1,4 +1,4 @@
-package ua.alikhanov.homeworks.hw2;
+package ua.alikhanov.hw.hw2;
 
 import java.util.Scanner;
 
@@ -25,14 +25,14 @@ public class Task4 {
     }
 
     public static int getMinAbsoluteValue(int a, int b, int c) {
-        int absoluteA = Math.abs(a);
-        int absoluteB = Math.abs(b);
-        int absoluteC = Math.abs(c);
+        int absoluteA = (a < 0) ? -a : a;
+        int absoluteB = (b < 0) ? -b : b;
+        int absoluteC = (c < 0) ? -c : c;
 
         return Math.min(Math.min(absoluteA, absoluteB), absoluteC);
     }
 
     public static void printResult(int minAbsoluteValue) {
-        System.out.println("Наименьшее по модулю исло: " + minAbsoluteValue);
+        System.out.println("Наименьшее по модулю число: " + minAbsoluteValue);
     }
 }

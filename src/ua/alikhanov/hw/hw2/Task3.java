@@ -1,4 +1,4 @@
-package ua.alikhanov.homeworks.hw2;
+package ua.alikhanov.hw.hw2;
 
 import java.util.Scanner;
 
@@ -22,16 +22,14 @@ public class Task3 {
     }
 
     public static void printEvenOrOdd(int number) {
+
         if (isEven(number)) {
-
-            if (isEven(number)) {
-                System.out.println(number + " - четное число"); // Вывод сообщения о том, что число четное.
-            } else {
-                System.out.println(number + " - нечетное число"); // Вывод сообщения о том, что число нечетное.
-            }
+            System.out.println(number + " - четное число"); // Вывод сообщения о том, что число четное.
+        } else {
+            System.out.println(number + " - нечетное число"); // Вывод сообщения о том, что число нечетное.
         }
-
     }
+
 
     public static boolean isEven(int number) {
 

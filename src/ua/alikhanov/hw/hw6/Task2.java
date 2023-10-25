@@ -1,4 +1,4 @@
-package ua.alikhanov.homeworks.hw6;
+package ua.alikhanov.hw.hw6;
 
 public class Task2 {
     public static void main(String[] args) {
