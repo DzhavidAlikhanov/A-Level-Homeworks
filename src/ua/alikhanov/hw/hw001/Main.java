@@ -1,4 +1,4 @@
-package ua.alikhanov.hw.hw1;
+package ua.alikhanov.hw.hw001;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package ua.alikhanov.hw.hw2;
+package ua.alikhanov.hw.hw002;
 
 import java.util.Scanner; // Импортируем класс Scanner для ввода с клавиатуры.
 

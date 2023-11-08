@@ -1,4 +1,4 @@
-package ua.alikhanov.hw.hw6;
+package ua.alikhanov.hw.hw006;
 
 public class Task1 {
     private String number;

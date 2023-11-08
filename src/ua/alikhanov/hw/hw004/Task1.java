@@ -1,4 +1,4 @@
-package ua.alikhanov.hw.hw4;
+package ua.alikhanov.hw.hw004;
 
 import java.util.Random;
 

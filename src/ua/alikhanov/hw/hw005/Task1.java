@@ -1,4 +1,4 @@
-package ua.alikhanov.hw.hw5;
+package ua.alikhanov.hw.hw005;
 
 public class Task1 {
     public static void main(String[] args) {

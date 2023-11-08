@@ -1,4 +1,4 @@
-package ua.alikhanov.hw.hw2;
+package ua.alikhanov.hw.hw002;
 
 public class Task2 {
     public static void main(String[] args) {
