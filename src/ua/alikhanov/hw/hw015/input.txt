@@ -1,0 +1,24 @@
+name : "Анатолий"
+secondName : "Анатолий"
+salary : 45
+age : 30
+
+name : "Анна"
+secondName : "Иванова"
+salary : 36
+age : 31
+
+name : "Степан"
+secondName : "Бандера"
+salary : 37
+age : 35
+
+name : "Анатолий"
+secondName : "Хворый"
+salary : 38
+age : 33
+
+name : "Николай"
+secondName : "Пупкин"
+salary : 39
+age : 33
