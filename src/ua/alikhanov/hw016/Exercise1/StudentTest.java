@@ -7,28 +7,18 @@ import java.lang.reflect.Method;
 public class StudentTest {
     public static void main(String[] args) {
 
-        Student student = new Student();
-        student.setFirstName("Dzhavid");
-        student.setLastName("Alikhanov");
-        student.setAge(Integer.parseInt("27"));
-        student.setExamScore(80);
+        StudentInfoPrinter printer = new StudentInfoPrinter();
 
-        Class<?> studentClass = student.getClass();
+        Student student = printer.createStudent("Dzhavid", "Alikhanov", 27, 80);
+
+        printer.printStudentInfo(student);
+
         try {
-            Field firstNameField = studentClass.getDeclaredField("firstName");
-            Field lastNameField = studentClass.getDeclaredField("lastName");
-
-            firstNameField.getAnnotation(ShowInfo.class).show();
-            lastNameField.getAnnotation(ShowInfo.class).show();
-
-            StudentInfoPrinter printer = new StudentInfoPrinter();
-            printer.printStudentInfo(student);
-
-            Method passExamMethod = studentClass.getDeclaredMethod("passExamSuccessfully");
+            Method passExamMethod = student.getClass().getDeclaredMethod("passExamSuccessfully");
             passExamMethod.setAccessible(true);
             passExamMethod.invoke(student);
 
-        } catch (NoSuchFieldException | IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
+        } catch (IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
             e.printStackTrace();
         }
 
