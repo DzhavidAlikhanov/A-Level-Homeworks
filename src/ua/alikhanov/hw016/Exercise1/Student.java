@@ -1,6 +1,5 @@
 package ua.alikhanov.hw016.Exercise1;
 
-
 public class Student {
     @ShowInfo
     private String firstName;
@@ -13,6 +12,13 @@ public class Student {
 
     @ShowInfo
     private int examScore;
+
+    public Student(String firstName, String lastName, int age, int examScore) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.examScore = examScore;
+    }
 
     private void passExamSuccessfully() {
         this.examScore = 100;

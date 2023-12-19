@@ -1,6 +1,5 @@
 package ua.alikhanov.hw016.Exercise1;
 
-import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
@@ -11,17 +10,21 @@ public class StudentTest {
 
         Student student = printer.createStudent("Dzhavid", "Alikhanov", 27, 80);
 
-        printer.printStudentInfo(student);
+        if (null != student) {
+            printer.printStudentInfo(student);
 
-        try {
-            Method passExamMethod = student.getClass().getDeclaredMethod("passExamSuccessfully");
-            passExamMethod.setAccessible(true);
-            passExamMethod.invoke(student);
+            try {
+                Method passExamMethod = student.getClass().getDeclaredMethod("passExamSuccessfully");
+                passExamMethod.setAccessible(true);
+                passExamMethod.invoke(student);
 
-        } catch (IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
-            e.printStackTrace();
+            } catch (IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
+                e.printStackTrace();
+            }
+
+            System.out.println("Новая оценка: " + student.getExamScore());
+        } else {
+            System.out.println("Ошибка при создании студента.");
         }
-
-        System.out.println("Новая оценка: " + student.getExamScore());
     }
 }
