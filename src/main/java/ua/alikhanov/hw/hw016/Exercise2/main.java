@@ -1,4 +1,4 @@
-package ua.alikhanov.hw016.Exercise2;
+package ua.alikhanov.hw.hw016.Exercise2;
 
 public class main {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package ua.alikhanov.hw016.Exercise1;
+package ua.alikhanov.hw.hw016.Exercise1;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
