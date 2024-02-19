@@ -31,10 +31,10 @@ public class JsonHandler {
     public static void main(String[] args) {
         try {
 
-            List<Person> persons = fromJsonFile("input.json", Person[].class);
+            List<Person> persons = fromJsonFile("C:\\Users\\Джавид\\Documents\\GitHub\\A-Level-Homeworks\\src\\main\\java\\ua\\alikhanov\\hw\\hw018\\input.json", Person[].class);
 
 
-            toJsonFile("output.json", persons);
+            toJsonFile("C:\\Users\\Джавид\\Documents\\GitHub\\A-Level-Homeworks\\src\\main\\java\\ua\\alikhanov\\hw\\hw018\\output.json", persons);
         } catch (Exception e) {
             e.printStackTrace();
         }
