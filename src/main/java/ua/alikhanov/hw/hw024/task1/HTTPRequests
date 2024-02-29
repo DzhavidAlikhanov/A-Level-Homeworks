@@ -1,0 +1,49 @@
+HTTP GET:
+GET-запрос используются для получения данных с сервера. Структура запроса:
+
+GET /path/to/resource HTTP/1.1
+Host: example.com
+
+HTTP POST:
+POST-запрос используется для отправки данных на сервер. Структура запроса:
+
+POST /path/to/resource HTTP/1.1
+Host: example.com
+Content-Type: application/json
+Content-Length: [length]
+
+{"key1": "value1", "key2": "value2"}
+
+Пример POST запроса с JSON телом:
+
+POST /api/user/create HTTP/1.1
+Host: example.com
+Content-Type: application/json
+Content-Length: 56
+
+{"username": "john_doe", "email": "john.doe@example.com"}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
