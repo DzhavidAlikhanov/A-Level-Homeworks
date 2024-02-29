@@ -15,12 +15,14 @@
     </properties>
 
     <dependencies>
+        <!-- Залежності для Java Persistence API (JPA) -->
         <dependency>
             <groupId>javax.persistence</groupId>
             <artifactId>javax.persistence-api</artifactId>
             <version>2.2</version>
         </dependency>
 
+        <!-- Залежності для Hibernate -->
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
@@ -31,53 +33,67 @@
             <artifactId>hibernate-c3p0</artifactId>
             <version>5.5.6.Final</version>
         </dependency>
+
+        <!-- Залежності для MySQL Connector -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.31</version>
         </dependency>
+
+        <!-- Залежності для PostgreSQL -->
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
             <version>42.5.1</version>
         </dependency>
 
-        <dependency>
-            <groupId>net.bytebuddy</groupId>
-            <artifactId>byte-buddy</artifactId>
-            <version>1.11.22</version>
-        </dependency>
-
+        <!-- Залежності для серіалізації JSON -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
             <version>2.16.0</version>
         </dependency>
 
+        <!-- Залежності для Spring Boot -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
             <version>2.7.1</version>
+        </dependency>
+
+        <!-- Залежності для Jakarta EE (Servlet API та інше) -->
+        <dependency>
+            <groupId>jakarta.servlet</groupId>
+            <artifactId>jakarta.servlet-api</artifactId>
+            <version>5.0.0</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>jakarta.persistence</groupId>
             <artifactId>jakarta.persistence-api</artifactId>
             <version>2.2.3</version>
         </dependency>
+
+        <!-- Залежності для MongoDB -->
         <dependency>
             <groupId>org.mongodb</groupId>
             <artifactId>mongodb-driver-sync</artifactId>
             <version>4.11.1</version>
         </dependency>
+
+        <!-- Залежності для AspectJ -->
         <dependency>
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjweaver</artifactId>
             <version>1.9.7</version>
         </dependency>
+
+        <!-- Залежності для Tomcat Embed (потрібно для вбудованого контейнера сервлетів) -->
         <dependency>
             <groupId>org.apache.tomcat.embed</groupId>
             <artifactId>tomcat-embed-core</artifactId>
-            <version>9.0.55</version> <!-- Перевірте актуальну версію -->
+            <version>9.0.55</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
